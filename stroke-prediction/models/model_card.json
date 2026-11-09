@@ -1,0 +1,78 @@
+{
+  "model_family": "Random Forest",
+  "best_params": {
+    "n_estimators": 200,
+    "min_samples_leaf": 20,
+    "max_features": 0.5,
+    "max_depth": 5,
+    "class_weight": null
+  },
+  "calibration": "sigmoid, 5-fold CalibratedClassifierCV",
+  "features": [
+    "age",
+    "avg_glucose_level",
+    "bmi",
+    "gender",
+    "ever_married",
+    "work_type",
+    "Residence_type",
+    "smoking_status",
+    "hypertension",
+    "heart_disease"
+  ],
+  "threshold": 0.03685230953651799,
+  "target_recall_on_training_oof": 0.8,
+  "training_prevalence": 0.04869097137264497,
+  "n_train": 4087,
+  "n_test": 1022,
+  "test_metrics": {
+    "ROC-AUC": {
+      "estimate": 0.837,
+      "ci95": [
+        0.782,
+        0.89
+      ]
+    },
+    "PR-AUC": {
+      "estimate": 0.235,
+      "ci95": [
+        0.15,
+        0.353
+      ]
+    },
+    "Recall (sensitivity)": {
+      "estimate": 0.8,
+      "ci95": [
+        0.686,
+        0.911
+      ]
+    },
+    "Specificity": {
+      "estimate": 0.758,
+      "ci95": [
+        0.733,
+        0.785
+      ]
+    },
+    "Precision (PPV)": {
+      "estimate": 0.145,
+      "ci95": [
+        0.104,
+        0.189
+      ]
+    },
+    "NPV": {
+      "estimate": 0.987,
+      "ci95": [
+        0.978,
+        0.995
+      ]
+    }
+  },
+  "versions": {
+    "scikit-learn": "1.9.1",
+    "xgboost": "3.4.1",
+    "pandas": "3.0.6"
+  },
+  "seed": 42
+}
